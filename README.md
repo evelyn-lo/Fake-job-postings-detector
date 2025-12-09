@@ -8,7 +8,6 @@ This project trains a logistic-regression model on Kaggle’s fake job postings 
 - `src/train_model.py` &mdash; training script that builds the TF-IDF + categorical pipeline, evaluates it, and writes artifacts.
 - `src/analyze_dataset.py` &mdash; exploratory analysis + phrase mining (outputs in `reports/`).
 - `src/compare_models.py` &mdash; benchmark suite for alternative classifiers.
-- `src/contextual_similarity.py` &mdash; uses sentence-transformer embeddings to find nearest neighbors
 - `models/fake_job_classifier.joblib` &mdash; serialized scikit-learn pipeline used by the web app.
 - `models/model_report.json` &mdash; metrics, training config, and top feature weights for transparency.
 - `webapp/` &mdash; Flask site (`app.py` + templates/static assets) that provides the UI and reasoning.
