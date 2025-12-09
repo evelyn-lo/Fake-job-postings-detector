@@ -1,0 +1,86 @@
+[
+  {
+    "feedback": "incorrect",
+    "timestamp": "2025-12-03T15:14:28.868796",
+    "label": "Likely Fake",
+    "prob_fake": "0.8211766151010171"
+  },
+  {
+    "feedback": "unsure",
+    "timestamp": "2025-12-03T15:24:44.099646",
+    "label": "Likely Fake",
+    "prob_fake": "0.6049985018314209"
+  },
+  {
+    "feedback": "unsure",
+    "timestamp": "2025-12-03T15:26:35.155968",
+    "label": "Likely Fake",
+    "prob_fake": "0.5061097270074298"
+  },
+  {
+    "feedback": "unsure",
+    "timestamp": "2025-12-03T15:27:40.093966",
+    "label": "Likely Fake",
+    "prob_fake": "0.5061097270074298"
+  },
+  {
+    "feedback": "unsure",
+    "timestamp": "2025-12-03T15:29:41.389969",
+    "label": "Likely Fake",
+    "prob_fake": "0.821035400152189"
+  },
+  {
+    "feedback": "unsure",
+    "timestamp": "2025-12-03T15:31:06.420910",
+    "label": "Likely Fake",
+    "prob_fake": "0.8097959052652025"
+  },
+  {
+    "feedback": "unsure",
+    "timestamp": "2025-12-03T15:31:26.780572",
+    "label": "Likely Fake",
+    "prob_fake": "0.8097959052652025"
+  },
+  {
+    "feedback": "unsure",
+    "timestamp": "2025-12-03T15:32:06.085175",
+    "label": "Likely Fake",
+    "prob_fake": "0.8097959052652025"
+  },
+  {
+    "feedback": "correct",
+    "timestamp": "2025-12-09T07:09:33.770816",
+    "label": "Likely Fake",
+    "prob_fake": "0.5697745964559855"
+  },
+  {
+    "feedback": "correct",
+    "timestamp": "2025-12-09T07:13:11.204148",
+    "label": "Likely Fake",
+    "prob_fake": "0.5697745964559855"
+  },
+  {
+    "feedback": "accurate",
+    "timestamp": "2025-12-09T23:47:10.486077",
+    "label": "Likely Legitimate",
+    "prob_fake": "0.46784048569505554"
+  },
+  {
+    "feedback": "accurate",
+    "timestamp": "2025-12-09T23:48:26.874185",
+    "label": "Likely Legitimate",
+    "prob_fake": "0.46784048569505554"
+  },
+  {
+    "feedback": "accurate",
+    "timestamp": "2025-12-09T23:48:41.918369",
+    "label": "Likely Legitimate",
+    "prob_fake": "0.46784048569505554"
+  },
+  {
+    "feedback": "accurate",
+    "timestamp": "2025-12-09T23:49:01.400751",
+    "label": "Likely Legitimate",
+    "prob_fake": "0.4446024326092549"
+  }
+]

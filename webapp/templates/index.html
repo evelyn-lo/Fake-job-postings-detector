@@ -118,25 +118,25 @@
           {% endfor %}
         </ul>
       </details>
+    </section>
 
-      <section class="feedback-panel">
-        <h3>Was this prediction accurate?</h3>
-        {% if feedback_message %}
-        <div class="alert alert-success">{{ feedback_message }}</div>
-        {% endif %}
-        <form method="POST" action="#result" class="feedback-form">
-          <input type="hidden" name="form_type" value="feedback" />
-          <input type="hidden" name="form_payload" value='{{ form_values | tojson }}' />
-          <input type="hidden" name="label" value="{{ result.label }}" />
-          <input type="hidden" name="prob_fake" value="{{ result.prob_fake }}" />
-          <div class="feedback-options">
-            <label><input type="radio" name="feedback_value" value="accurate" required /> Accurate</label>
-            <label><input type="radio" name="feedback_value" value="not_accurate" /> Not accurate</label>
-            <label><input type="radio" name="feedback_value" value="not_sure" /> Not sure</label>
-          </div>
-          <button type="submit" class="secondary">Send feedback</button>
-        </form>
-      </section>
+    <section class="card feedback-card" id="feedback">
+      <h2>Was this prediction accurate?</h2>
+      {% if feedback_message %}
+      <div class="alert alert-success">{{ feedback_message }}</div>
+      {% endif %}
+      <form method="POST" action="#feedback" class="feedback-form">
+        <input type="hidden" name="form_type" value="feedback" />
+        <input type="hidden" name="form_payload" value='{{ form_values | tojson }}' />
+        <input type="hidden" name="label" value="{{ result.label }}" />
+        <input type="hidden" name="prob_fake" value="{{ result.prob_fake }}" />
+        <div class="feedback-options">
+          <label><input type="radio" name="feedback_value" value="accurate" required /> Accurate</label>
+          <label><input type="radio" name="feedback_value" value="not_accurate" /> Not accurate</label>
+          <label><input type="radio" name="feedback_value" value="not_sure" /> Not sure</label>
+        </div>
+        <button type="submit" class="secondary">Send feedback</button>
+      </form>
     </section>
     {% endif %}
 
