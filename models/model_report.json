@@ -1,0 +1,217 @@
+{
+  "dataset": {
+    "path": "/Users/evelynlo/Library/CloudStorage/GoogleDrive-evelynlo@andrew.cmu.edu/My Drive/CMU/05318/fake-jobs/data/fake_job_postings.csv",
+    "num_samples": 17880,
+    "fraudulent_rate": 0.04843400447427293
+  },
+  "training": {
+    "config": {
+      "test_size": 0.2,
+      "random_state": 42,
+      "text_features": [
+        "title",
+        "location",
+        "department",
+        "salary_range",
+        "company_profile",
+        "description",
+        "requirements",
+        "benefits"
+      ],
+      "categorical_features": [],
+      "numeric_features": [
+        "telecommuting",
+        "has_company_logo",
+        "has_questions",
+        "text_length",
+        "scam_phrase_hit",
+        "has_url",
+        "has_email",
+        "has_phone",
+        "has_freemail",
+        "telecommuting_missing",
+        "has_company_logo_missing",
+        "has_questions_missing"
+      ],
+      "vectorizer_max_features": 20000,
+      "vectorizer_min_df": 5,
+      "vectorizer_ngram_range": [
+        1,
+        3
+      ],
+      "model_type": "LogisticRegression",
+      "model_params": {
+        "solver": "liblinear",
+        "class_weight": "balanced",
+        "max_iter": 2000,
+        "C": 1.0,
+        "penalty": "l2"
+      }
+    },
+    "train_size": 14304,
+    "test_size": 3576
+  },
+  "metrics": {
+    "accuracy": 0.9653243847874721,
+    "precision": 0.5910780669144982,
+    "recall": 0.9190751445086706,
+    "f1": 0.7194570135746606,
+    "roc_auc": 0.9919961815399199
+  },
+  "top_features": {
+    "fake": [
+      {
+        "feature": "text token 'accion'",
+        "raw_feature_name": "text__accion",
+        "weight": 4.324411868235959
+      },
+      {
+        "feature": "text token 'link'",
+        "raw_feature_name": "text__link",
+        "weight": 3.2609349084203636
+      },
+      {
+        "feature": "text token 'money'",
+        "raw_feature_name": "text__money",
+        "weight": 3.1608511389417266
+      },
+      {
+        "feature": "text token 'hotel'",
+        "raw_feature_name": "text__hotel",
+        "weight": 2.865701318956603
+      },
+      {
+        "feature": "text token 'high school'",
+        "raw_feature_name": "text__high school",
+        "weight": 2.6853739568095554
+      },
+      {
+        "feature": "text token '000'",
+        "raw_feature_name": "text__000",
+        "weight": 2.5637978597065922
+      },
+      {
+        "feature": "scam_phrase_hit",
+        "raw_feature_name": "num__scam_phrase_hit",
+        "weight": 2.5388556966116536
+      },
+      {
+        "feature": "text token 'engineering'",
+        "raw_feature_name": "text__engineering",
+        "weight": 2.5223337688554066
+      },
+      {
+        "feature": "text token 'supplier'",
+        "raw_feature_name": "text__supplier",
+        "weight": 2.511278155043548
+      },
+      {
+        "feature": "text token 'subsea'",
+        "raw_feature_name": "text__subsea",
+        "weight": 2.500519770062839
+      },
+      {
+        "feature": "text token 'earn'",
+        "raw_feature_name": "text__earn",
+        "weight": 2.416628455980481
+      },
+      {
+        "feature": "text token 'administrative'",
+        "raw_feature_name": "text__administrative",
+        "weight": 2.3086024024054694
+      },
+      {
+        "feature": "text token 'financing'",
+        "raw_feature_name": "text__financing",
+        "weight": 2.210854540686649
+      },
+      {
+        "feature": "text token 'cash'",
+        "raw_feature_name": "text__cash",
+        "weight": 2.2066072781663078
+      },
+      {
+        "feature": "text token 'internet'",
+        "raw_feature_name": "text__internet",
+        "weight": 2.2026424918890943
+      }
+    ],
+    "real": [
+      {
+        "feature": "text token 'team'",
+        "raw_feature_name": "text__team",
+        "weight": -2.4942979236980776
+      },
+      {
+        "feature": "has_company_logo",
+        "raw_feature_name": "num__has_company_logo",
+        "weight": -2.250715299518617
+      },
+      {
+        "feature": "text token 'companies'",
+        "raw_feature_name": "text__companies",
+        "weight": -2.2197307024278397
+      },
+      {
+        "feature": "text token 'marketing'",
+        "raw_feature_name": "text__marketing",
+        "weight": -1.9147492570407156
+      },
+      {
+        "feature": "text token 'english'",
+        "raw_feature_name": "text__english",
+        "weight": -1.9067488860215647
+      },
+      {
+        "feature": "text token 'client'",
+        "raw_feature_name": "text__client",
+        "weight": -1.8584719382380261
+      },
+      {
+        "feature": "text token 'web'",
+        "raw_feature_name": "text__web",
+        "weight": -1.839881898187511
+      },
+      {
+        "feature": "text token 'search'",
+        "raw_feature_name": "text__search",
+        "weight": -1.8188183837500205
+      },
+      {
+        "feature": "text token 'software'",
+        "raw_feature_name": "text__software",
+        "weight": -1.8090840453281722
+      },
+      {
+        "feature": "text token 'growing'",
+        "raw_feature_name": "text__growing",
+        "weight": -1.7024287634779052
+      },
+      {
+        "feature": "text token 'php'",
+        "raw_feature_name": "text__php",
+        "weight": -1.6791742555984872
+      },
+      {
+        "feature": "text token '50'",
+        "raw_feature_name": "text__50",
+        "weight": -1.628198026445259
+      },
+      {
+        "feature": "text token 'digital'",
+        "raw_feature_name": "text__digital",
+        "weight": -1.6240379237831495
+      },
+      {
+        "feature": "text token 'based'",
+        "raw_feature_name": "text__based",
+        "weight": -1.5948704089368573
+      },
+      {
+        "feature": "text token 'new'",
+        "raw_feature_name": "text__new",
+        "weight": -1.5494973775872558
+      }
+    ]
+  }
+}

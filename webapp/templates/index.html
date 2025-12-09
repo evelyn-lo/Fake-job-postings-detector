@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Job Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <div class="info-banner">
+      <strong>Heads-up:</strong> This tool uses machine learning to spot patterns seen in past scam postings. It cannot guarantee accuracy - always verify roles independently.
+    </div>
+
+    <header>
+      <h1>Fake Job Detector</h1>
+      <p>Paste the details and get a fraud likelihood plus top signals.</p>
+    </header>
+
+    {% if error %}
+    <div class="alert alert-error">{{ error }}</div>
+    {% endif %}
+
+    <section class="card form-card">
+      <div class="form-header">
+        <div>
+          <h2>Score a Job Posting</h2>
+          <p>Leave sections blank if the post omits them - those absences become part of the fraud signal.</p>
+        </div>
+        <button type="submit" form="job-form" class="primary">Predict Fraud Risk</button>
+      </div>
+
+      <form id="job-form" method="POST" action="#result">
+        <input type="hidden" name="form_type" value="score" />
+
+        <div class="section-grid">
+          <div class="form-section soft">
+            <h3>Core Details</h3>
+            <div class="grid four-col">
+              {% for field in ["title", "location", "department", "salary_range"] %}
+              <label class="form-field slim">
+                <span>{{ field.replace('_', ' ').title() }}</span>
+                <input type="text" name="{{ field }}" value="{{ form_values[field] }}" placeholder="{{ field.replace('_', ' ').title() }}" />
+              </label>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="form-section accent">
+            <h3>Long-form Text</h3>
+            <div class="grid two-col">
+              {% for field in ["company_profile", "description"] %}
+              <label class="form-field">
+                <span>{{ field.replace('_', ' ').title() }}</span>
+                <textarea name="{{ field }}" placeholder="Paste {{ field.replace('_', ' ') }} text (optional)">{{ form_values[field] }}</textarea>
+              </label>
+              {% endfor %}
+            </div>
+            <div class="grid two-col">
+              {% for field in ["requirements", "benefits"] %}
+              <label class="form-field">
+                <span>{{ field.replace('_', ' ').title() }}</span>
+                <textarea name="{{ field }}" placeholder="Paste {{ field.replace('_', ' ') }} text (optional)">{{ form_values[field] }}</textarea>
+              </label>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+        <details class="optional-panel">
+          <summary>Show optional metadata</summary>
+          <div class="grid two-col meta">
+            {% for field in categorical_fields %}
+            <label class="form-field">
+              <span>{{ field.replace('_', ' ').title() }}</span>
+              <input type="text" name="{{ field }}" value="{{ form_values[field] }}" placeholder="e.g. Full-time, Mid-Senior level" />
+            </label>
+            {% endfor %}
+
+            {% for field in base_numeric_fields %}
+            <label class="form-field">
+              <span>{{ field.replace('_', ' ').title() }}</span>
+              <select name="{{ field }}">
+                <option value="none" {% if form_values[field] == "none" %}selected{% endif %}>None / Unknown</option>
+                <option value="0" {% if form_values[field] == "0" %}selected{% endif %}>No / False</option>
+                <option value="1" {% if form_values[field] == "1" %}selected{% endif %}>Yes / True</option>
+              </select>
+            </label>
+            {% endfor %}
+          </div>
+        </details>
+      </form>
+    </section>
+
+    {% if result %}
+    <section class="card result" id="result">
+      <h2>Prediction</h2>
+      <p class="prediction-label {{ 'fake' if result.label == 'Likely Fake' else 'real' }}">{{ result.label }}</p>
+      <p>
+        Fraud probability: <strong>{{ (result.prob_fake * 100) | round(2) }}%</strong> |
+        Legitimate probability: <strong>{{ (result.prob_real * 100) | round(2) }}%</strong>
+      </p>
+      {% if confidence_percent %}
+      <div class="confidence-meter">
+        <div class="meter-track">
+          <div class="meter-fill" style="width: {{ confidence_percent }}%"></div>
+        </div>
+        <span>{{ confidence_percent }}% confidence</span>
+      </div>
+      {% endif %}
+      {% if uncertainty_note %}<div class="uncertainty">{{ uncertainty_note }}</div>{% endif %}
+      {% if result.summary %}<p class="summary-text">{{ result.summary }}</p>{% endif %}
+
+      <details class="explain-panel" open>
+        <summary>Why the model thinks this</summary>
+        <ul class="reasons">
+          {% for reason in result.reasons %}
+          <li><strong>{{ reason.feature }}</strong> <span class="reason-impact">impact {{ reason.impact | round(3) }}</span></li>
+          {% endfor %}
+        </ul>
+      </details>
+    </section>
+    {% endif %}
+
+    <section class="card">
+      <h2>Model Stats</h2>
+      <div class="grid two-col">
+        <div>
+          <h3>Performance (test set)</h3>
+          <ul>
+            <li>Accuracy: {{ (metrics.accuracy * 100) | round(2) }}%</li>
+            <li>Precision: {{ (metrics.precision * 100) | round(2) }}%</li>
+            <li>Recall: {{ (metrics.recall * 100) | round(2) }}%</li>
+            <li>F1: {{ metrics.f1 | round(3) }}</li>
+            <li>ROC AUC: {{ metrics.roc_auc | round(3) }}</li>
+          </ul>
+          <h4>Training setup</h4>
+          <p>
+            {{ training.config.model_type }} using TF-IDF + numeric cues, trained on {{ training.train_size }} rows ({{ dataset.num_samples }}
+            total records, fraud rate {{ (dataset.fraudulent_rate * 100) | round(2) }}%).
+          </p>
+        </div>
+        <div>
+          <h3>Top Fraud Indicators</h3>
+          <ol>
+            {% for feature in top_features.fake[:6] %}
+            <li>{{ feature.feature }} (weight {{ feature.weight | round(2) }})</li>
+            {% endfor %}
+          </ol>
+          <h3>Signals of Legitimate Roles</h3>
+          <ol>
+            {% for feature in top_features.real[:6] %}
+            <li>{{ feature.feature }} (weight {{ feature.weight | round(2) }})</li>
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="card pipeline">
+      <h2>How the AI works</h2>
+      <ol class="pipeline-steps">
+        <li>Clean & concatenate title, salary, and long-form text into a single document.</li>
+        <li>Generate TF-IDF features + numeric cues (length, logo/questions flags, scam phrase/URL/email heuristics).</li>
+        <li>Score with class-balanced logistic regression.</li>
+        <li>Surface the strongest coefficients as the explanation.</li>
+      </ol>
+    </section>
+  </body>
+</html>
+

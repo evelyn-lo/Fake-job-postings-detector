@@ -1,0 +1,547 @@
+{
+  "overall": {
+    "count": 17880,
+    "fraud_rate": 0.04843400447427293,
+    "median_text_words": 353.0
+  },
+  "fraudulent": {
+    "count": 866,
+    "telecommuting": 0.07390300230946882,
+    "has_company_logo": 0.32678983833718245,
+    "has_questions": 0.28868360277136257,
+    "avg_text_words": 286.2471131639723,
+    "avg_description_words": 158.74826789838338,
+    "avg_requirements_words": 58.40762124711316,
+    "avg_benefits_words": 29.451501154734412,
+    "avg_company_profile_words": 31.709006928406467
+  },
+  "legitimate": {
+    "count": 17014,
+    "telecommuting": 0.041318913835664745,
+    "has_company_logo": 0.8191489361702128,
+    "has_questions": 0.5020571294228282,
+    "avg_text_words": 383.25608322557895,
+    "avg_description_words": 171.04137768896203,
+    "avg_requirements_words": 79.03185611849065,
+    "avg_benefits_words": 30.018337839426355,
+    "avg_company_profile_words": 95.65052309862466
+  },
+  "fraudulent_top_industries": [
+    {
+      "value": "Unknown",
+      "count": 275,
+      "share": 0.31755196304849886
+    },
+    {
+      "value": "Oil & Energy",
+      "count": 109,
+      "share": 0.1258660508083141
+    },
+    {
+      "value": "Accounting",
+      "count": 57,
+      "share": 0.06581986143187067
+    },
+    {
+      "value": "Hospital & Health Care",
+      "count": 51,
+      "share": 0.05889145496535797
+    },
+    {
+      "value": "Marketing and Advertising",
+      "count": 45,
+      "share": 0.05196304849884527
+    },
+    {
+      "value": "Financial Services",
+      "count": 35,
+      "share": 0.04041570438799076
+    },
+    {
+      "value": "Information Technology and Services",
+      "count": 32,
+      "share": 0.03695150115473441
+    },
+    {
+      "value": "Telecommunications",
+      "count": 26,
+      "share": 0.03002309468822171
+    },
+    {
+      "value": "Consumer Services",
+      "count": 24,
+      "share": 0.02771362586605081
+    },
+    {
+      "value": "Real Estate",
+      "count": 24,
+      "share": 0.02771362586605081
+    }
+  ],
+  "legitimate_top_industries": [
+    {
+      "value": "Unknown",
+      "count": 4628,
+      "share": 0.27201128482426234
+    },
+    {
+      "value": "Information Technology and Services",
+      "count": 1702,
+      "share": 0.10003526507581992
+    },
+    {
+      "value": "Computer Software",
+      "count": 1371,
+      "share": 0.08058069824850124
+    },
+    {
+      "value": "Internet",
+      "count": 1062,
+      "share": 0.06241918420124603
+    },
+    {
+      "value": "Education Management",
+      "count": 822,
+      "share": 0.04831315387328083
+    },
+    {
+      "value": "Marketing and Advertising",
+      "count": 783,
+      "share": 0.04602092394498648
+    },
+    {
+      "value": "Financial Services",
+      "count": 744,
+      "share": 0.04372869401669214
+    },
+    {
+      "value": "Hospital & Health Care",
+      "count": 446,
+      "share": 0.026213706359468673
+    },
+    {
+      "value": "Consumer Services",
+      "count": 334,
+      "share": 0.019630892206418244
+    },
+    {
+      "value": "Telecommunications",
+      "count": 316,
+      "share": 0.018572939931820853
+    }
+  ],
+  "fraudulent_top_functions": [
+    {
+      "value": "Unknown",
+      "count": 337,
+      "share": 0.3891454965357968
+    },
+    {
+      "value": "Administrative",
+      "count": 119,
+      "share": 0.1374133949191686
+    },
+    {
+      "value": "Engineering",
+      "count": 113,
+      "share": 0.13048498845265588
+    },
+    {
+      "value": "Customer Service",
+      "count": 67,
+      "share": 0.07736720554272518
+    },
+    {
+      "value": "Sales",
+      "count": 41,
+      "share": 0.04734411085450346
+    },
+    {
+      "value": "Other",
+      "count": 32,
+      "share": 0.03695150115473441
+    },
+    {
+      "value": "Information Technology",
+      "count": 32,
+      "share": 0.03695150115473441
+    },
+    {
+      "value": "Accounting/Auditing",
+      "count": 29,
+      "share": 0.03348729792147806
+    },
+    {
+      "value": "Finance",
+      "count": 15,
+      "share": 0.017321016166281754
+    },
+    {
+      "value": "Business Development",
+      "count": 13,
+      "share": 0.015011547344110854
+    }
+  ],
+  "legitimate_top_functions": [
+    {
+      "value": "Unknown",
+      "count": 6118,
+      "share": 0.3595862231103797
+    },
+    {
+      "value": "Information Technology",
+      "count": 1717,
+      "share": 0.10091689197131774
+    },
+    {
+      "value": "Sales",
+      "count": 1427,
+      "share": 0.08387210532502645
+    },
+    {
+      "value": "Engineering",
+      "count": 1235,
+      "share": 0.07258728106265429
+    },
+    {
+      "value": "Customer Service",
+      "count": 1162,
+      "share": 0.0682966968378982
+    },
+    {
+      "value": "Marketing",
+      "count": 820,
+      "share": 0.04819560362054778
+    },
+    {
+      "value": "Administrative",
+      "count": 511,
+      "share": 0.030034089573292583
+    },
+    {
+      "value": "Health Care Provider",
+      "count": 337,
+      "share": 0.01980721758551781
+    },
+    {
+      "value": "Design",
+      "count": 337,
+      "share": 0.01980721758551781
+    },
+    {
+      "value": "Education",
+      "count": 324,
+      "share": 0.01904314094275303
+    }
+  ],
+  "fraudulent_top_employment_type": [
+    {
+      "value": "Full-time",
+      "count": 490,
+      "share": 0.5658198614318707
+    },
+    {
+      "value": "Unknown",
+      "count": 241,
+      "share": 0.27829099307159355
+    },
+    {
+      "value": "Part-time",
+      "count": 74,
+      "share": 0.08545034642032333
+    },
+    {
+      "value": "Contract",
+      "count": 44,
+      "share": 0.050808314087759814
+    },
+    {
+      "value": "Other",
+      "count": 15,
+      "share": 0.017321016166281754
+    },
+    {
+      "value": "Temporary",
+      "count": 2,
+      "share": 0.0023094688221709007
+    }
+  ],
+  "legitimate_top_employment_type": [
+    {
+      "value": "Full-time",
+      "count": 11130,
+      "share": 0.6541671564593864
+    },
+    {
+      "value": "Unknown",
+      "count": 3230,
+      "share": 0.18984365816386506
+    },
+    {
+      "value": "Contract",
+      "count": 1480,
+      "share": 0.0869871870224521
+    },
+    {
+      "value": "Part-time",
+      "count": 723,
+      "share": 0.04249441636299518
+    },
+    {
+      "value": "Temporary",
+      "count": 239,
+      "share": 0.014047255201598684
+    },
+    {
+      "value": "Other",
+      "count": 212,
+      "share": 0.012460326789702597
+    }
+  ],
+  "top_tokens": {
+    "fraudulent_tokens": [
+      {
+        "token": "aker",
+        "fraud_share": 0.0007236544549977386,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 8.289021915965495
+      },
+      {
+        "token": "aker solutions",
+        "fraud_share": 0.0006762723180633629,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 8.221303741910544
+      },
+      {
+        "token": "subsea",
+        "fraud_share": 0.0006762723180633629,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 8.221303741910544
+      },
+      {
+        "token": "aptitude staffing",
+        "fraud_share": 0.00046520643535568907,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.847189163686457
+      },
+      {
+        "token": "people values",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "petroleum field",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "provider products",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "countries url_0fa3f7c5e23a16de16a841e368006cae916884407d90b154dfef3976483a71ae",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "people 30",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "discoveries production",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "url_0fa3f7c5e23a16de16a841e368006cae916884407d90b154dfef3976483a71ae",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "url_0fa3f7c5e23a16de16a841e368006cae916884407d90b154dfef3976483a71ae information",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "recovery petroleum",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "bring discoveries",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "production maximize",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "field employ",
+        "fraud_share": 0.0003704421614869376,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.619405232815745
+      },
+      {
+        "token": "refined resources",
+        "fraud_share": 0.0003489048265167668,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.559507091234676
+      },
+      {
+        "token": "leveraging career",
+        "fraud_share": 0.0003402898925286985,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.534505789029258
+      },
+      {
+        "token": "represented candidates",
+        "fraud_share": 0.0002498330856539812,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.225500947108657
+      },
+      {
+        "token": "following perks",
+        "fraud_share": 0.000245525618659947,
+        "real_share": 1.818254878968773e-07,
+        "log_odds": 7.208109204396787
+      }
+    ],
+    "legitimate_tokens": [
+      {
+        "token": "athens",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.0002443734557334031,
+        "log_odds": -4.038347584520857
+      },
+      {
+        "token": "tidewater",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.0002418278989028468,
+        "log_odds": -4.027876284653562
+      },
+      {
+        "token": "european",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00021673598157307775,
+        "log_odds": -3.918329911063058
+      },
+      {
+        "token": "increase productivity",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.0002140085992546246,
+        "log_odds": -3.90566617069804
+      },
+      {
+        "token": "document communications",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00021019026400879016,
+        "log_odds": -3.8876631126700856
+      },
+      {
+        "token": "university degree",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.0001860074741185055,
+        "log_odds": -3.7654368293893894
+      },
+      {
+        "token": "game",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00018582564863060862,
+        "log_odds": -3.7644588342014127
+      },
+      {
+        "token": "1500",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.0001850983466790211,
+        "log_odds": -3.7605372605482312
+      },
+      {
+        "token": "berlin",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00018491652119112422,
+        "log_odds": -3.759554459486323
+      },
+      {
+        "token": "asia",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.0001810981859452898,
+        "log_odds": -3.738689321022361
+      },
+      {
+        "token": "gr",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.000176370723259971,
+        "log_odds": -3.7122381349351916
+      },
+      {
+        "token": "awesome",
+        "fraud_share": 8.614933988068317e-06,
+        "real_share": 0.00034019548785505746,
+        "log_odds": -3.676023209151907
+      },
+      {
+        "token": "greece",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00016400659008298333,
+        "log_odds": -3.6395565835003865
+      },
+      {
+        "token": "abroad",
+        "fraud_share": 8.614933988068317e-06,
+        "real_share": 0.0003240130194322354,
+        "log_odds": -3.6272864909085722
+      },
+      {
+        "token": "medium large",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00015836999995818014,
+        "log_odds": -3.604584040290266
+      },
+      {
+        "token": "auckland",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00015400618824865507,
+        "log_odds": -3.5766427580898172
+      },
+      {
+        "token": "time permanent",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00015291523532127383,
+        "log_odds": -3.569533723410711
+      },
+      {
+        "token": "large companies",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.0001476422961722644,
+        "log_odds": -3.534442403599441
+      },
+      {
+        "token": "\u03ba\u03b1\u03b9",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00014546039031750185,
+        "log_odds": -3.5195537911056904
+      },
+      {
+        "token": "permanent positions",
+        "fraud_share": 4.3074669940341585e-06,
+        "real_share": 0.00014455126287801746,
+        "log_odds": -3.513284178092095
+      }
+    ]
+  }
+}

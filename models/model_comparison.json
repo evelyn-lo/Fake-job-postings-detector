@@ -1,0 +1,46 @@
+[
+  {
+    "model": "Logistic Regression",
+    "train_accuracy": 0.9611996644295302,
+    "val_accuracy": 0.9586129753914989,
+    "train_log_loss": 0.12288772874682458,
+    "val_log_loss": 0.12759516870209697,
+    "val_precision": 0.5420875420875421,
+    "val_recall": 0.930635838150289,
+    "val_f1": 0.6851063829787234,
+    "val_roc_auc": 0.990749406762819
+  },
+  {
+    "model": "Linear SVM (Calibrated)",
+    "train_accuracy": 0.9988115212527964,
+    "val_accuracy": 0.9860178970917226,
+    "train_log_loss": 0.021448603328120562,
+    "val_log_loss": 0.04277313893169483,
+    "val_precision": 0.9361702127659575,
+    "val_recall": 0.7630057803468208,
+    "val_f1": 0.8407643312101911,
+    "val_roc_auc": 0.9936030602035946
+  },
+  {
+    "model": "Random Forest",
+    "train_accuracy": 1.0,
+    "val_accuracy": 0.9784675615212528,
+    "train_log_loss": 0.018628229653597714,
+    "val_log_loss": 0.06491243745608868,
+    "val_precision": 1.0,
+    "val_recall": 0.5549132947976878,
+    "val_f1": 0.7137546468401487,
+    "val_roc_auc": 0.9895527407812555
+  },
+  {
+    "model": "Gradient Boosting",
+    "train_accuracy": 0.9781879194630873,
+    "val_accuracy": 0.9756711409395973,
+    "train_log_loss": 0.07012564956522238,
+    "val_log_loss": 0.08627989291983588,
+    "val_precision": 0.9777777777777777,
+    "val_recall": 0.5086705202312138,
+    "val_f1": 0.6692015209125475,
+    "val_roc_auc": 0.9627368914541573
+  }
+]
