@@ -82,5 +82,17 @@
     "timestamp": "2025-12-09T23:49:01.400751",
     "label": "Likely Legitimate",
     "prob_fake": "0.4446024326092549"
+  },
+  {
+    "feedback": "not_accurate",
+    "timestamp": "2025-12-10T01:59:11.943610",
+    "label": "Likely Fake",
+    "prob_fake": "0.9948507792311457"
+  },
+  {
+    "feedback": "accurate",
+    "timestamp": "2025-12-10T02:07:08.018926",
+    "label": "Likely Fake",
+    "prob_fake": "0.9948507792311457"
   }
 ]
